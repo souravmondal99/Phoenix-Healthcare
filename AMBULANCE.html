@@ -206,12 +206,12 @@
     <body>
       <br>
       <br>
-      <form style="max-width:500px;margin:auto">
+      <form name="myForm" style="max-width:500px;margin:auto">
         <h2>Ambulance Booking Form</h2>
 
         <div class="input-container">
           <i class="fa fa-user icon"></i>
-          <input class="input-field" type="text" placeholder="Patient Name" name="nm2">
+          <input class="input-field" type="text" required placeholder="Patient Name" name="nm">
         </div>
         <div class="input-container">
           <i class="fa fa-mobile-phone icon"></i>
@@ -268,7 +268,11 @@
 
 <script>
 function book() {
-  alert("Booking Confirmed!!")
+	 var x = document.forms["myForm"]["nm"].value;
+	  if (x == "") 
+	    alert("Fill Up the form");
+	  else
+ 	alert("Booking Confirmed!!");
 }
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
